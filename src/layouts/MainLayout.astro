@@ -1,0 +1,81 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+}
+
+const { title = "Demo e-commerce" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen bg-[#fdf8f6] text-zinc-900 flex flex-col">
+    {/* Barra superior tipo promo */}
+    <div class="w-full text-[11px] md:text-xs text-center bg-zinc-900 text-zinc-100 py-1">
+      <span class="mx-2">Envío gratis en pedidos superiores a $35.000</span>
+      <span class="hidden md:inline mx-2">•</span>
+      <span class="hidden md:inline mx-2">Suscribite y obtené 10% OFF en tu primera compra</span>
+    </div>
+
+    <header class="border-b bg-white/80 backdrop-blur sticky top-0 z-20">
+      <nav class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+        {/* Logo / Marca */}
+        <a href="/" class="font-semibold tracking-[0.25em] uppercase text-xs">
+          DERMO SKIN
+        </a>
+
+        {/* Menú principal */}
+        <div class="hidden md:flex items-center gap-6 text-xs tracking-wide">
+          <div class="flex items-center gap-4">
+            <a href="/products" class="hover:text-pink-700 transition-colors">
+              Women
+            </a>
+            <a href="/products" class="hover:text-pink-700 transition-colors">
+              Youth
+            </a>
+            <a href="/products" class="hover:text-pink-700 transition-colors">
+              Sets
+            </a>
+            <a href="/products" class="hover:text-pink-700 transition-colors">
+              Gift Card
+            </a>
+          </div>
+
+          <div class="h-4 w-px bg-zinc-300" />
+
+          <div class="flex items-center gap-4">
+            <a href="/account" class="hover:text-pink-700 transition-colors">
+              Explore
+            </a>
+            <a href="/account" class="hover:text-pink-700 transition-colors">
+              My Account
+            </a>
+          </div>
+        </div>
+
+        {/* Iconos (por ahora links de texto) */}
+        <div class="flex items-center gap-3 text-xs">
+          <a href="/products" class="hover:text-pink-700 transition-colors">
+            Buscar
+          </a>
+          <a href="/account" class="hover:text-pink-700 transition-colors">
+            Cuenta
+          </a>
+          <a href="/cart" class="hover:text-pink-700 transition-colors">
+            Cart (0)
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="flex-1 max-w-6xl mx-auto w-full px-4 py-8 md:py-10">
+      <slot />
+    </main>
+
+    <foo

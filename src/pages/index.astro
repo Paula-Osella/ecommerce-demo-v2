@@ -1,16 +1,284 @@
 ---
+import MainLayout from "../layouts/MainLayout.astro";
 
+const collections = [
+  {
+    id: "nourish",
+    name: "Nourish",
+    description: "Rutinas nutritivas para pieles que necesitan confort.",
+  },
+  {
+    id: "cleanse",
+    name: "Cleanse",
+    description: "Limpieza suave para preparar la piel para el resto de tu rutina.",
+  },
+  {
+    id: "sets",
+    name: "Sets",
+    description: "Combos curados para regalar o armar tu ritual completo.",
+  },
+];
+
+const featuredProducts = [
+  {
+    id: 1,
+    name: "Sérum hidratante",
+    category: "Nourish",
+    price: "$25.000",
+    description: "Hidratación intensa para todo tipo de piel.",
+  },
+  {
+    id: 2,
+    name: "Crema de noche nutritiva",
+    category: "Nourish",
+    price: "$30.000",
+    description: "Repara y nutre mientras dormís.",
+  },
+  {
+    id: 3,
+    name: "Limpiador facial suave",
+    category: "Cleanse",
+    price: "$18.000",
+    description: "Limpieza diaria sin resecar la piel.",
+  },
+  {
+    id: 4,
+    name: "Espuma limpiadora",
+    category: "Cleanse",
+    price: "$20.000",
+    description: "Textura ligera, sensación de piel fresca.",
+  },
+  {
+    id: 5,
+    name: "Contorno de ojos",
+    category: "Youth",
+    price: "$22.000",
+    description: "Ilumina y suaviza la zona del contorno.",
+  },
+  {
+    id: 6,
+    name: "Mascarilla nocturna",
+    category: "Nourish",
+    price: "$28.000",
+    description: "Tratamiento intensivo para noches de spa en casa.",
+  },
+];
+
+const reviews = [
+  {
+    id: 1,
+    name: "María G.",
+    role: "Cliente frecuente",
+    rating: 5,
+    text: "Desde que uso la rutina completa noto la piel mucho más luminosa y sin tanta tirantez.",
+  },
+  {
+    id: 2,
+    name: "Lucía P.",
+    role: "Piel sensible",
+    rating: 4,
+    text: "Por primera vez encontré productos que no me irritan. Me encanta la textura de los sérums.",
+  },
+  {
+    id: 3,
+    name: "Camila R.",
+    role: "Nueva en skincare",
+    rating: 5,
+    text: "La web me ayudó a entender cómo armar mi ritual. Todo se siente simple y aplicable al día a día.",
+  },
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout title="Inicio | Demo e-commerce">
+  {/* HERO principal */}
+  <section class="grid gap-10 md:grid-cols-2 items-center mb-16">
+    <div class="space-y-4">
+      <p class="text-[11px] uppercase tracking-[0.2em] text-pink-500">
+        Nueva colección · Skin ritual
+      </p>
+      <h1 class="text-3xl md:text-4xl font-semibold leading-tight">
+        Cuidar tu piel puede ser simple, suave y consciente.
+      </h1>
+      <p class="text-sm text-zinc-600 max-w-md">
+        Demo de e-commerce para mostrar el flujo completo a tu cliente: home,
+        colecciones, productos, carrito y panel admin. Todo con estética de
+        marca de cosmética.
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <a
+          href="/products"
+          class="inline-flex items-center justify-center px-4 py-2 rounded-full bg-pink-600 text-white text-xs md:text-sm font-medium hover:bg-pink-700 transition-colors"
+        >
+          Shop all products
+        </a>
+        <a
+          href="/products"
+          class="inline-flex items-center justify-center px-4 py-2 rounded-full border border-pink-200 text-[11px] md:text-xs text-pink-700 hover:bg-pink-50 transition-colors"
+        >
+          Ver colecciones
+        </a>
+      </div>
+    </div>
+
+    {/* Bloque visual tipo imagen grande */}
+    <div class="relative">
+      <div class="aspect-[4/5] rounded-[2.5rem] bg-gradient-to-b from-pink-100 via-rose-50 to-amber-50 shadow-md" />
+      <div class="absolute -bottom-4 -left-4 hidden md:block rounded-3xl bg-white shadow-lg px-4 py-3 text-xs">
+        <p class="font-semibold">Ritual diario</p>
+        <p class="text-zinc-500">Limpieza · Sérum · Crema · Contorno</p>
+      </div>
+    </div>
+  </section>
+
+  {/* NUESTROS PRODUCTOS - CARRUSEL */}
+  <section class="space-y-4 mb-14">
+    <div class="flex items-baseline justify-between gap-4">
+      <h2 class="text-lg md:text-xl font-semibold">Nuestros productos</h2>
+      <div class="flex flex-wrap gap-2 text-[11px] md:text-xs text-zinc-500">
+        <button class="px-3 py-1 rounded-full border border-zinc-900 text-zinc-900">
+          Todos
+        </button>
+        <button class="px-3 py-1 rounded-full border border-zinc-200 hover:border-pink-300 hover:text-pink-700 transition-colors">
+          Cleanse
+        </button>
+        <button class="px-3 py-1 rounded-full border border-zinc-200 hover:border-pink-300 hover:text-pink-700 transition-colors">
+          Nourish
+        </button>
+        <button class="px-3 py-1 rounded-full border border-zinc-200 hover:border-pink-300 hover:text-pink-700 transition-colors">
+          Youth
+        </button>
+      </div>
+    </div>
+
+    <div class="relative">
+      {/* Botón anterior */}
+      <button
+        type="button"
+        data-carousel-prev
+        class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 z-10 h-9 w-9 items-center justify-center rounded-full border border-zinc-300 bg-white/90 text-zinc-700 shadow-sm hover:border-pink-300 hover:text-pink-700 transition-colors"
+      >
+        ‹
+      </button>
+
+      {/* Contenedor scrollable */}
+      <div
+        data-carousel="products"
+        class="flex gap-4 overflow-x-auto pb-3 pt-1 snap-x snap-mandatory scroll-smooth"
+      >
+        {featuredProducts.map((product) => (
+          <article
+            class="min-w-[220px] max-w-[230px] snap-start rounded-3xl border bg-white p-4 flex flex-col gap-3 hover:shadow-md hover:border-pink-200 transition-all"
+          >
+            {/* "Imagen" más alta para que no se vea cortada */}
+            <div class="w-full h-64 rounded-2xl bg-pink-50 mb-3" />
+            <div class="space-y-1">
+              <p class="text-[11px] uppercase tracking-[0.16em] text-zinc-500">
+                {product.category}
+              </p>
+              <h3 class="text-sm font-medium">{product.name}</h3>
+              <p class="text-xs text-zinc-500">
+                {product.description}
+              </p>
+            </div>
+            <div class="mt-auto flex items-center justify-between pt-2">
+              <span class="text-sm font-semibold text-pink-700">
+                {product.price}
+              </span>
+              <a
+                href="/cart"
+                class="text-[11px] px-3 py-1 rounded-full bg-zinc-900 text-zinc-50 hover:bg-pink-700 transition-colors"
+              >
+                Add to bag
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      {/* Botón siguiente */}
+      <button
+        type="button"
+        data-carousel-next
+        class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 h-9 w-9 items-center justify-center rounded-full border border-zinc-300 bg-white/90 text-zinc-700 shadow-sm hover:border-pink-300 hover:text-pink-700 transition-colors"
+      >
+        ›
+      </button>
+    </div>
+  </section>
+
+  {/* NUESTRAS COLECCIONES */}
+  <section class="mb-14">
+    <div class="flex items-baseline justify-between gap-4 mb-4">
+      <h2 class="text-lg md:text-xl font-semibold">Our Collections</h2>
+      <a
+        href="/products"
+        class="text-[11px] md:text-xs uppercase tracking-[0.18em] text-zinc-600 hover:text-pink-700"
+      >
+        Shop all
+      </a>
+    </div>
+
+    <div class="grid gap-4 md:grid-cols-3">
+      {collections.map((collection) => (
+        <article class="group rounded-3xl bg-white border border-zinc-200 hover:border-pink-200 hover:shadow-md transition-all p-5 flex flex-col justify-between">
+          <div class="space-y-1">
+            <h3 class="text-sm font-semibold">{collection.name}</h3>
+            <p class="text-xs text-zinc-500">
+              {collection.description}
+            </p>
+          </div>
+          <div class="mt-4 flex items-center justify-between text-[11px] text-pink-700">
+            <span class="uppercase tracking-[0.16em]">Discover</span>
+            <span class="group-hover:translate-x-1 transition-transform">
+              →
+            </span>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  {/* RESEÑAS / TESTIMONIOS */}
+  <section class="mb-16 space-y-4">
+    <h2 class="text-lg md:text-xl font-semibold">Lo que dicen nuestras clientas</h2>
+    <div class="grid gap-4 md:grid-cols-3">
+      {reviews.map((review) => (
+        <article class="rounded-3xl bg-white border border-zinc-200 p-5 flex flex-col gap-3">
+          <div class="flex items-center justify-between gap-2">
+            <div>
+              <p class="text-sm font-medium">{review.name}</p>
+              <p class="text-[11px] text-zinc-500">{review.role}</p>
+            </div>
+            <div class="flex gap-0.5 text-amber-500 text-xs">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <span>{i < review.rating ? "★" : "☆"}</span>
+              ))}
+            </div>
+          </div>
+          <p class="text-xs text-zinc-600 leading-relaxed">
+            “{review.text}”
+          </p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  {/* Script del carrusel */}
+  <script>
+    if (typeof window !== "undefined") {
+      const container = document.querySelector('[data-carousel="products"]');
+      const prevBtn = document.querySelector("[data-carousel-prev]");
+      const nextBtn = document.querySelector("[data-carousel-next]");
+
+      const scrollAmount = 260;
+
+      prevBtn?.addEventListener("click", () => {
+        container?.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+      });
+
+      nextBtn?.addEventListener("click", () => {
+        container?.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      });
+    }
+  </script>
+</MainLayout>
