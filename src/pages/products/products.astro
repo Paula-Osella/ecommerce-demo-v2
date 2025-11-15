@@ -1,10 +1,274 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+
+const featuredProducts = [
+  {
+    id: 1,
+    name: "Sérum hidratante",
+    category: "Nourish",
+    price: "$25.000",
+    description: "Hidratación intensa para todo tipo de piel.",
+    image: "/Product_Carrousel/Product_Carrousel_1.webp",
+  },
+  {
+    id: 2,
+    name: "Crema de noche nutritiva",
+    category: "Nourish",
+    price: "$30.000",
+    description: "Repara y nutre mientras dormís.",
+    image: "/Product_Carrousel/Product_Carrousel_1.webp",
+  },
+  {
+    id: 3,
+    name: "Limpiador facial suave",
+    category: "Cleanse",
+    price: "$18.000",
+    description: "Limpieza diaria sin resecar la piel.",
+    image: "/Product_Carrousel/Product_Carrousel_1.webp",
+  },
+  {
+    id: 4,
+    name: "Espuma limpiadora",
+    category: "Cleanse",
+    price: "$20.000",
+    description: "Textura ligera, sensación de piel fresca.",
+    image: "/Product_Carrousel/Product_Carrousel_1.webp",
+  },
+  {
+    id: 5,
+    name: "Contorno de ojos",
+    category: "Youth",
+    price: "$22.000",
+    description: "Ilumina y suaviza la zona del contorno.",
+    image: "/Product_Carrousel/Product_Carrousel_1.webp",
+  },
+  {
+    id: 6,
+    name: "Mascarilla nocturna",
+    category: "Nourish",
+    price: "$28.000",
+    description: "Tratamiento intensivo para noches de spa en casa.",
+    image: "/Product_Carrousel/Product_Carrousel_1.webp",
+  },
+];
 ---
 
-<MainLayout title="Productos | Demo e-commerce">
-  <section>
-    <h1>Listado de productos</h1>
-    <p>Acá después vamos a mostrar el catálogo de productos.</p>
+<MainLayout title="All Products | Demo e-commerce">
+  {/* HERO ALL PRODUCTS */}
+  <section class="max-w-4xl mx-auto pt-16 pb-10 text-center">
+    <p class="text-[11px] uppercase tracking-[0.18em] text-zinc-500 mb-4">
+      All · Cleanse · Nourish · Youth
+    </p>
+
+    <h1 class="text-3xl md:text-4xl font-semibold mb-4">
+      All Products
+    </h1>
+
+    <p class="text-sm md:text-base text-zinc-600 max-w-2xl mx-auto">
+      Selected with love, these essentials are the secret of your daily beauty ritual.
+    </p>
   </section>
+
+  {/* TIRA DE 3 IMÁGENES (MISMA FOTO) */}
+  <section class="mb-16">
+    <div class="grid gap-3 md:grid-cols-3">
+      {Array.from({ length: 3 }).map((_, index) => (
+        <div class="aspect-[4/5] overflow-hidden bg-zinc-100">
+          <img
+            src="/Looks/Looks_4.jpg"
+            alt="Beauty product portrait"
+            loading={index === 0 ? "eager" : "lazy"}
+            class="h-full w-full object-cover"
+          />
+        </div>
+      ))}
+    </div>
+  </section>
+
+  {/* FILTROS */}
+  <section class="mb-10">
+    <div class="flex flex-wrap items-center justify-center gap-3 text-xs md:text-sm">
+      <button
+        type="button"
+        data-filter="all"
+        class="px-4 py-2 rounded-full border border-zinc-900"
+        style="opacity: 1;"
+      >
+        All
+      </button>
+      <button
+        type="button"
+        data-filter="cleanse"
+        class="px-4 py-2 rounded-full border border-zinc-200"
+        style="opacity: 0.6;"
+      >
+        Cleanse
+      </button>
+      <button
+        type="button"
+        data-filter="nourish"
+        class="px-4 py-2 rounded-full border border-zinc-200"
+        style="opacity: 0.6;"
+      >
+        Nourish
+      </button>
+      <button
+        type="button"
+        data-filter="youth"
+        class="px-4 py-2 rounded-full border border-zinc-200"
+        style="opacity: 0.6;"
+      >
+        Youth
+      </button>
+    </div>
+  </section>
+
+  {/* GRID DE TODOS LOS PRODUCTOS */}
+  <section class="mb-24">
+    <div class="flex items-baseline justify-between gap-4 mb-6">
+      <h2 class="text-lg md:text-xl font-semibold">
+        Todos los productos
+      </h2>
+      <p class="text-[11px] md:text-xs text-zinc-500">
+        {featuredProducts.length} productos encontrados
+      </p>
+    </div>
+
+    <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+      {featuredProducts.map((product) => (
+        <article
+          data-product-category={product.category.toLowerCase()}
+          class="product-card rounded-3xl border border-zinc-200 bg-white p-4 flex flex-col gap-3 hover:shadow-md hover:border-pink-200 transition-all"
+        >
+          <div class="w-full aspect-[4/5] rounded-2xl overflow-hidden bg-pink-50 mb-2">
+            <img
+              src={product.image}
+              alt={product.name}
+              class="h-full w-full object-cover"
+            />
+          </div>
+
+          <div class="space-y-1">
+            <p class="text-[11px] uppercase tracking-[0.16em] text-zinc-500">
+              {product.category}
+            </p>
+            <h3 class="text-sm font-medium">
+              {product.name}
+            </h3>
+            <p class="text-xs text-zinc-500">
+              {product.description}
+            </p>
+          </div>
+
+          <div class="mt-auto flex items-center justify-between pt-2">
+            <span class="text-sm font-semibold text-pink-700">
+              {product.price}
+            </span>
+            <button class="text-[11px] px-3 py-1 rounded-full bg-zinc-900 text-zinc-50 hover:bg-pink-700 transition-colors">
+              Add to bag
+            </button>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  {/* BLOQUES DE VALORES (tipo SAFETY · MINIMALISM · BALANCE · OPTIMISM) */}
+  <section class="border-t border-zinc-200 py-10 md:py-14">
+    <div class="max-w-6xl mx-auto grid gap-8 md:grid-cols-4 px-4 md:px-0">
+      {/* Seguridad */}
+      <div class="space-y-4">
+        <div class="flex items-center gap-2">
+          <span class="text-2xl">✓</span>
+        </div>
+        <div class="h-[2px] w-12 bg-zinc-900 mb-1"></div>
+        <h3 class="text-sm md:text-base tracking-[0.14em] uppercase text-zinc-900 font-semibold">
+          Safety
+        </h3>
+        <p class="text-[13px] md:text-sm text-zinc-600 leading-relaxed">
+          Nuestros productos siguen altos estándares de seguridad para que tu rutina sea tan
+          tranquila como efectiva.
+        </p>
+      </div>
+
+      {/* Minimalismo */}
+      <div class="space-y-4">
+        <div class="flex items-center gap-2">
+          <span class="text-2xl">·</span>
+        </div>
+        <div class="h-[2px] w-12 bg-zinc-900 mb-1"></div>
+        <h3 class="text-sm md:text-base tracking-[0.14em] uppercase text-zinc-900 font-semibold">
+          Minimalism
+        </h3>
+        <p class="text-[13px] md:text-sm text-zinc-600 leading-relaxed">
+          Creemos que menos es más: fórmulas precisas y una rutina simple que funciona sin
+          complicarte.
+        </p>
+      </div>
+
+      {/* Balance */}
+      <div class="space-y-4">
+        <div class="flex items-center gap-2">
+          <span class="text-2xl">+</span>
+        </div>
+        <div class="h-[2px] w-12 bg-zinc-900 mb-1"></div>
+        <h3 class="text-sm md:text-base tracking-[0.14em] uppercase text-zinc-900 font-semibold">
+          Balance
+        </h3>
+        <p class="text-[13px] md:text-sm text-zinc-600 leading-relaxed">
+          Buscamos el equilibrio perfecto entre cuidado de la piel, resultados visibles y
+          placer al usar cada producto.
+        </p>
+      </div>
+
+      {/* Optimismo */}
+      <div class="space-y-4">
+        <div class="flex items-center gap-2">
+          <span class="text-2xl">☺</span>
+        </div>
+        <div class="h-[2px] w-12 bg-zinc-900 mb-1"></div>
+        <h3 class="text-sm md:text-base tracking-[0.14em] uppercase text-zinc-900 font-semibold">
+          Optimism
+        </h3>
+        <p class="text-[13px] md:text-sm text-zinc-600 leading-relaxed">
+          Celebramos tu piel real y cada pequeño ritual que te recuerda que cuidarte también
+          puede ser un momento de disfrute.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* SCRIPT FILTROS */}
+  <script>
+    if (typeof window !== "undefined") {
+      const buttons = document.querySelectorAll("[data-filter]");
+      const cards = document.querySelectorAll(".product-card");
+
+      const setFilter = (filter) => {
+        cards.forEach((card) => {
+          const category = card.dataset.productCategory;
+          if (filter === "all" || category === filter) {
+            card.classList.remove("hidden");
+          } else {
+            card.classList.add("hidden");
+          }
+        });
+      };
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const filter = btn.dataset.filter;
+
+          // Visual: opacidad de botones
+          buttons.forEach((b) => (b.style.opacity = "0.6"));
+          btn.style.opacity = "1";
+
+          setFilter(filter);
+        });
+      });
+
+      // Filtro inicial
+      setFilter("all");
+    }
+  </script>
 </MainLayout>

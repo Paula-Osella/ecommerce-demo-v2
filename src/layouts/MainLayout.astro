@@ -20,9 +20,12 @@ const { title = "Demo e-commerce" } = Astro.props;
     <div class="w-full text-[11px] md:text-xs text-center bg-zinc-900 text-zinc-100 py-1">
       <span class="mx-2">Envío gratis en pedidos superiores a $35.000</span>
       <span class="hidden md:inline mx-2">•</span>
-      <span class="hidden md:inline mx-2">Suscribite y obtené 10% OFF en tu primera compra</span>
+      <span class="hidden md:inline mx-2">
+        Suscribite y obtené 10% OFF en tu primera compra
+      </span>
     </div>
 
+    {/* HEADER / NAV */}
     <header class="border-b bg-white/80 backdrop-blur sticky top-0 z-20">
       <nav class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
         {/* Logo / Marca */}
@@ -59,7 +62,7 @@ const { title = "Demo e-commerce" } = Astro.props;
           </div>
         </div>
 
-        {/* Iconos (por ahora links de texto) */}
+        {/* Iconos / enlaces rápidos */}
         <div class="flex items-center gap-3 text-xs">
           <a href="/products" class="hover:text-pink-700 transition-colors">
             Buscar
@@ -74,8 +77,243 @@ const { title = "Demo e-commerce" } = Astro.props;
       </nav>
     </header>
 
+    {/* CONTENIDO DE CADA PÁGINA */}
     <main class="flex-1 max-w-6xl mx-auto w-full px-4 py-8 md:py-10">
       <slot />
     </main>
 
-    <foo
+    {/* FOOTER GLOBAL */}
+    <footer class="bg-pink-100 from-white to-pink-50/30 border-t border-zinc-200 mt-24 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+      {/* Newsletter Section */}
+      <div class="max-w-7xl mx-auto px-4 py-12">
+        <div class="rounded-3xl bg-gradient-to-br from-pink-500 to-rose-600 p-8 md:p-12 text-white text-center">
+          <div class="max-w-2xl mx-auto space-y-4">
+            <h3 class="text-2xl md:text-3xl font-semibold">
+              Suscribite a nuestro newsletter
+            </h3>
+            <p class="text-sm opacity-90">
+              Recibí tips de belleza, lanzamientos exclusivos y un
+              <strong> 10% OFF </strong> en tu primera compra
+            </p>
+            <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mt-6">
+              <input
+                type="email"
+                placeholder="Tu email"
+                class="flex-1 px-4 py-3 rounded-full text-zinc-900 text-sm focus:outline-none focus:ring-2 focus:ring-white/50"
+              />
+              <button
+                type="submit"
+                class="px-6 py-3 rounded-full bg-white text-pink-600 font-medium text-sm hover:bg-pink-50 transition-colors whitespace-nowrap"
+              >
+                Suscribirme
+              </button>
+            </form>
+            <p class="text-xs opacity-75 mt-3">
+              *Al suscribirte aceptás recibir emails promocionales. Podés darte
+              de baja en cualquier momento.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Footer Content */}
+      <div class="max-w-7xl mx-auto px-4 py-12">
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+          {/* Column 1: Tienda */}
+          <div class="space-y-4">
+            <h4 class="text-sm font-semibold text-zinc-900">Tienda</h4>
+            <ul class="space-y-2 text-sm text-zinc-600">
+              <li>
+                <a href="/products" class="hover:text-pink-600 transition-colors">
+                  Todos los productos
+                </a>
+              </li>
+              <li>
+                <a href="/collections/new" class="hover:text-pink-600 transition-colors">
+                  Novedades
+                </a>
+              </li>
+              <li>
+                <a href="/collections/bestsellers" class="hover:text-pink-600 transition-colors">
+                  Más vendidos
+                </a>
+              </li>
+              <li>
+                <a href="/collections/sale" class="hover:text-pink-600 transition-colors">
+                  Ofertas
+                </a>
+              </li>
+              <li>
+                <a href="/gift-cards" class="hover:text-pink-600 transition-colors">
+                  Gift Cards
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 2: Categorías */}
+          <div class="space-y-4">
+            <h4 class="text-sm font-semibold text-zinc-900">Categorías</h4>
+            <ul class="space-y-2 text-sm text-zinc-600">
+              <li>
+                <a href="/category/face" class="hover:text-pink-600 transition-colors">
+                  Rostro
+                </a>
+              </li>
+              <li>
+                <a href="/category/eyes" class="hover:text-pink-600 transition-colors">
+                  Ojos
+                </a>
+              </li>
+              <li>
+                <a href="/category/lips" class="hover:text-pink-600 transition-colors">
+                  Labios
+                </a>
+              </li>
+              <li>
+                <a href="/category/skincare" class="hover:text-pink-600 transition-colors">
+                  Skincare
+                </a>
+              </li>
+              <li>
+                <a href="/category/tools" class="hover:text-pink-600 transition-colors">
+                  Brochas &amp; Tools
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 3: Ayuda */}
+          <div class="space-y-4">
+            <h4 class="text-sm font-semibold text-zinc-900">Ayuda</h4>
+            <ul class="space-y-2 text-sm text-zinc-600">
+              <li>
+                <a href="/faq" class="hover:text-pink-600 transition-colors">
+                  Preguntas frecuentes
+                </a>
+              </li>
+              <li>
+                <a href="/shipping" class="hover:text-pink-600 transition-colors">
+                  Envíos
+                </a>
+              </li>
+              <li>
+                <a href="/returns" class="hover:text-pink-600 transition-colors">
+                  Cambios y devoluciones
+                </a>
+              </li>
+              <li>
+                <a href="/size-guide" class="hover:text-pink-600 transition-colors">
+                  Guía de tonos
+                </a>
+              </li>
+              <li>
+                <a href="/contact" class="hover:text-pink-600 transition-colors">
+                  Contacto
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 4: Acerca de */}
+          <div class="space-y-4">
+            <h4 class="text-sm font-semibold text-zinc-900">Acerca de</h4>
+            <ul class="space-y-2 text-sm text-zinc-600">
+              <li>
+                <a href="/about" class="hover:text-pink-600 transition-colors">
+                  Nuestra historia
+                </a>
+              </li>
+              <li>
+                <a href="/sustainability" class="hover:text-pink-600 transition-colors">
+                  Sustentabilidad
+                </a>
+              </li>
+              <li>
+                <a href="/blog" class="hover:text-pink-600 transition-colors">
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a href="/careers" class="hover:text-pink-600 transition-colors">
+                  Trabajá con nosotros
+                </a>
+              </li>
+              <li>
+                <a href="/press" class="hover:text-pink-600 transition-colors">
+                  Prensa
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 5: Contacto & Redes */}
+          <div class="space-y-4 col-span-2 md:col-span-4 lg:col-span-1">
+            <h4 class="text-sm font-semibold text-zinc-900">Seguinos</h4>
+            <div class="flex gap-3">
+              {/* Instagram */}
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-9 h-9 rounded-full bg-pink-100 flex items-center justify-center text-pink-600 hover:bg-pink-600 hover:text-white transition-colors"
+                aria-label="Instagram"
+              >
+                {/* svg instagram */}
+                ...
+              </a>
+              {/* (dejá acá el resto de iconos SVG igual que en tu index) */}
+            </div>
+
+            <div class="mt-6 space-y-2">
+              <p class="text-xs font-medium text-zinc-700">Atención al cliente</p>
+              <p class="text-sm text-zinc-600">📧 hola@tutienda.com</p>
+              <p class="text-sm text-zinc-600">📱 +54 9 11 1234-5678</p>
+              <p class="text-xs text-zinc-500 mt-2">Lun-Vie: 9-18hs</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Trust Badges Mini */}
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 py-8 border-y border-zinc-200">
+          {/* ...los 4 items de bunny, vegano, etc, igual que en tu index... */}
+        </div>
+
+        {/* Bottom Bar */}
+        <div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-zinc-600">
+          <div class="flex items-center gap-2">
+            <span class="text-lg">💄</span>
+            <p>
+              © 2025 Tiendademaquillaje@outlook.com. Todos los derechos
+              reservados.
+            </p>
+          </div>
+
+          <div class="flex flex-wrap gap-4 justify-center">
+            <a href="/terms" class="hover:text-pink-600 transition-colors">
+              Términos y condiciones
+            </a>
+            <a href="/privacy" class="hover:text-pink-600 transition-colors">
+              Política de privacidad
+            </a>
+            <a href="/cookies" class="hover:text-pink-600 transition-colors">
+              Cookies
+            </a>
+          </div>
+
+          <div class="flex gap-2">
+            <img src="/payment-visa.svg" alt="Visa" class="h-6 opacity-50" />
+            <img src="/payment-mastercard.svg" alt="Mastercard" class="h-6 opacity-50" />
+            <img src="/payment-mercadopago.svg" alt="MercadoPago" class="h-6 opacity-50" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <style>
+      footer a {
+        display: inline-block;
+      }
+    </style>
+  </body>
+</html>
