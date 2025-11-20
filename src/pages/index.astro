@@ -188,6 +188,11 @@ const bestSellers = [
 ---
 
 <main>
+  <button
+    id="btnUp"
+    class="fixed bottom-5 right-5 z-[9999] bg-black text-white p-3 rounded-full shadow-lg hover:bg-zinc-800 transition-all">
+    ↑
+  </button>
   <Header />
   
   <!-- HERO SECTION -->
@@ -501,5 +506,23 @@ const bestSellers = [
     }, { threshold: 0.5 });
     
     videos.forEach(video => observer.observe(video));
+  });
+
+  //Boton para subir
+
+  const btnUp = document.getElementById("btnUp");
+
+  // Mostrar/ocultar botón al scrollear
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      btnUp.classList.remove("opacity-0", "pointer-events-none");
+    } else {
+      btnUp.classList.add("opacity-0", "pointer-events-none");
+    }
+  });
+
+  // Scroll suave hacia arriba
+  btnUp.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
 </script>
