@@ -21,57 +21,6 @@ const collections = [
   },
 ];
 
-const featuredProducts = [
-  {
-    id: 1,
-    name: "Sérum hidratante",
-    category: "Hidratación",
-    price: "$25.000",
-    description: "Hidratación intensa para todo tipo de piel.",
-    image: "/Product_Carrousel/Product_Carrousel_1.webp",
-  },
-  {
-    id: 2,
-    name: "Crema antiedad de noche",
-    category: "Antienvejecimiento",
-    price: "$30.000",
-    description: "Repara y nutre mientras dormís, suavizando líneas finas.",
-    image: "/Product_Carrousel/Product_Carrousel_1.webp",
-  },
-  {
-    id: 3,
-    name: "Limpiador facial suave",
-    category: "Limpieza",
-    price: "$18.000",
-    description: "Limpieza diaria sin resecar la piel.",
-    image: "/Product_Carrousel/Product_Carrousel_1.webp",
-  },
-  {
-    id: 4,
-    name: "Espuma limpiadora",
-    category: "Limpieza",
-    price: "$20.000",
-    description: "Textura ligera, sensación de piel fresca.",
-    image: "/Product_Carrousel/Product_Carrousel_1.webp",
-  },
-  {
-    id: 5,
-    name: "Contorno de ojos luminoso",
-    category: "Antienvejecimiento",
-    price: "$22.000",
-    description: "Ilumina y suaviza la zona del contorno de ojos.",
-    image: "/Product_Carrousel/Product_Carrousel_1.webp",
-  },
-  {
-    id: 6,
-    name: "Mascarilla nocturna reparadora",
-    category: "Hidratación",
-    price: "$28.000",
-    description: "Tratamiento intensivo para noches de spa en casa.",
-    image: "/Product_Carrousel/Product_Carrousel_1.webp",
-  },
-];
-
 const reviews = [
   {
     id: 1,
@@ -93,30 +42,6 @@ const reviews = [
     role: "Nueva en skincare",
     rating: 5,
     text: "La web me ayudó a entender cómo armar mi ritual. Todo se siente simple y aplicable al día a día.",
-  },
-];
-
-const looks = [
-  {
-    id: 1,
-    title: "Rutina básica AM",
-    description: "Limpiador + serum antioxidante + protector solar.",
-    products: "Piel normal/mixta",
-    image: "/Looks/Looks_1.webp",
-  },
-  {
-    id: 2,
-    title: "Rutina reparadora PM",
-    description: "Doble limpieza + serum reparador + crema de noche.",
-    products: "Piel seca/sensibilizada",
-    image: "/Looks/Looks_2.webp",
-  },
-  {
-    id: 3,
-    title: "Rutina foco manchas",
-    description: "Serum despigmentante + crema hidratante ligera.",
-    products: "Piel con hiperpigmentación",
-    image: "/Looks/Looks_3.webp",
   },
 ];
 
@@ -143,46 +68,26 @@ const instagramPosts = [
   },
 ];
 
-const blogPosts = [
-  {
-    id: 1,
-    title: "Cómo elegir la rutina ideal según tu tipo de piel",
-    category: "Tutorial",
-    date: "15 Nov 2024",
-    image: "/Tendencia/Tendencia_1.webp",
-  },
-  {
-    id: 2,
-    title: "Tendencias en dermocosmética para esta temporada",
-    category: "Trends",
-    date: "10 Nov 2024",
-    image: "/Tendencia/Tendencia_2.webp",
-  },
-  {
-    id: 3,
-    title: "Pasos básicos para una piel saludable",
-    category: "Skincare",
-    date: "5 Nov 2024",
-    image: "/Tendencia/Tendencia_3.webp",
-  },
-];
-
 const bestSellers = [
   {
     name: "Protección Solar Clear Soft SPF 50",
     subtitle: "Prevención",
+    img: "/Sin_Fondo/CLEAR-SOFT-SPF-50-M-PREVENT-sin-fondo.webp"
   },
   {
     name: "Acn.e Bio",
     subtitle: "Control de acné",
+    img: "/Sin_Fondo/ACNE-BIO-TREAT-GEL-sin-fondo.webp"
   },
   {
     name: "Suero Reparador Definitivo de Arrugas",
     subtitle: "Antienvejecimiento",
+    img: "/Sin_Fondo/serum-reparador-de-arrugas-definitivo-sin-fondo.webp"
   },
   {
     name: "Hidratante Ultra para Piel Grasa",
     subtitle: "Hidratación balanceada",
+    img: "/Sin_Fondo/ULTRA-MOISTURIZER-FOR-OILY-SKIN-sin-fondo.webp"
   },
 ];
 ---
@@ -230,7 +135,7 @@ const bestSellers = [
                         rounded-bl-[80px] sm:rounded-bl-[100px] md:rounded-bl-[130px] rounded-br-none
                         relative mb-16 sm:mb-20">
               <img
-                src="/Publicidad/publicidad-celular.webp"
+                src={product.img}
                 class="w-44 sm:w-36 md:w-40 h-64 sm:h-54 md:h-60 absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/4 object-contain"
                 alt={product.name}
               />
@@ -462,7 +367,7 @@ const bestSellers = [
   </section>
 
   <Footer />
-</MainLayout>
+</main>
 
 <style>
   .hero-img {
