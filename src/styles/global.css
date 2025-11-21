@@ -82,3 +82,27 @@
 .product-card.list-view .product-card-text {
     flex: 1;
 }
+
+/* 🧱 Contenedor de productos: grid vs lista */
+.products-grid.grid-view {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+
+  /* ✅ centrado en pantallas chicas */
+  justify-content: center;
+}
+
+/* ✅ desde tablet/desktop vuelve a la izquierda */
+@media (min-width: 768px) {
+  .products-grid.grid-view {
+    justify-content: flex-start;
+  }
+}
+
+.products-grid.list-view {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
