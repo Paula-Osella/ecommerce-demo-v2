@@ -133,7 +133,7 @@ const categoryCounts = Object.keys(allCategories).reduce((acc, cat) => {
         {filteredProducts.length > 0 ? (
           <div
             id="products-grid"
-            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center"
           >
             {filteredProducts.map((product) => (
               <article 
