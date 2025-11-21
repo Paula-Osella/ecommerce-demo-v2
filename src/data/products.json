@@ -244,115 +244,115 @@
   },
 
   {
-    "id": "",
-    "name": "Maquillaje: desenfocar y corregir (1-5 según la escala de Fitzpatrick)",
+    "id": "crema-recuperadora-micropeel",
+    "name": "CREMA RECUPERADORA MICROPEEL",
     "category": "antiedad",
-    "description": "Maquillaje no comedogénico y no graso, especialmente indicado para pieles con acné. Difumina y disimula imperfecciones y marcas en la piel. Proporciona un aspecto natural y saludable. Su textura ligera facilita su uso y aplicación. Disponible en varios tonos según la escala de Fitzpatrick del 1 al 5.",
+    "description": "Esta crema, especialmente diseñada para la renovación de la piel, gracias a tecnologías únicas, elimina las células muertas y revela una piel nueva, más sana y joven, además de estimular la regeneración celular. Con MICROPEEL CREAM, tu piel lucirá más radiante desde la primera aplicación. Apta para todo tipo de piel.",
     "image": "/Products/Antiedad/crema-de-recuperacion-micropeel.webp"
   },
   {
-    "id": "",
-    "name": "Maquillaje: desenfocar y corregir (1-5 según la escala de Fitzpatrick)",
+    "id": "gala-crema-hialuronica",
+    "name": "GALA + CREMA HIALURÓNICA",
     "category": "antiedad",
-    "description": "Maquillaje no comedogénico y no graso, especialmente indicado para pieles con acné. Difumina y disimula imperfecciones y marcas en la piel. Proporciona un aspecto natural y saludable. Su textura ligera facilita su uso y aplicación. Disponible en varios tonos según la escala de Fitzpatrick del 1 al 5.",
+    "description": "Rejuvenecimiento suave e hidratación de la piel. Producto antiedad para una piel suave y joven. Su fórmula con ácido glicólico al 10% ayuda a renovar la piel e hidrata profundamente gracias al ácido hialurónico.",
     "image": "/Products/Antiedad/crema-gala-hialuronico.webp"
   },
   {
-    "id": "",
-    "name": "Maquillaje: desenfocar y corregir (1-5 según la escala de Fitzpatrick)",
+    "id": "crema-lacto-acido-hialuronico",
+    "name": "CREMA LACTO + ÁCIDO HIALURÓNICO",
     "category": "antiedad",
-    "description": "Maquillaje no comedogénico y no graso, especialmente indicado para pieles con acné. Difumina y disimula imperfecciones y marcas en la piel. Proporciona un aspecto natural y saludable. Su textura ligera facilita su uso y aplicación. Disponible en varios tonos según la escala de Fitzpatrick del 1 al 5.",
+    "description": "Un producto que regenera la piel delicada mediante la exfoliación y la hidrata profundamente. Un producto antiedad, ideal para pieles jóvenes y delicadas. Rejuvenece la piel con un 10 % de ácido láctico concentrado y la hidrata gracias al ácido hialurónico.",
     "image": "/Products/Antiedad/crema-lacto-acido-hialuronico.webp"
   },
   {
-    "id": "",
-    "name": "Maquillaje: desenfocar y corregir (1-5 según la escala de Fitzpatrick)",
+    "id": "gel-gluten",
+    "name": "GEL GLUTEN",
     "category": "antiedad",
-    "description": "Maquillaje no comedogénico y no graso, especialmente indicado para pieles con acné. Difumina y disimula imperfecciones y marcas en la piel. Proporciona un aspecto natural y saludable. Su textura ligera facilita su uso y aplicación. Disponible en varios tonos según la escala de Fitzpatrick del 1 al 5.",
+    "description": "Sérum antiedad para piel grasa. Sérum activo de uso matutino que equilibra y reduce la grasa cutánea y la producción de sebo.   Renueva la piel sin descamación, equilibra la grasa y reduce la producción de sebo de las glándulas sebáceas. Puede aplicarse en el rostro y, según la reacción de la piel, también en el cuello y el escote.",
     "image": "/Products/Antiedad/glow-gel.webp"
   },
   {
-    "id": "",
-    "name": "Maquillaje: desenfocar y corregir (1-5 según la escala de Fitzpatrick)",
+    "id": "hidratante-activo-crema-humectante-para-piel-normal-a-seca",
+    "name": "HIDRATANTE ACTIVO / CREMA HUMECTANTE PARA PIEL NORMAL A SECA",
     "category": "antiedad",
-    "description": "Maquillaje no comedogénico y no graso, especialmente indicado para pieles con acné. Difumina y disimula imperfecciones y marcas en la piel. Proporciona un aspecto natural y saludable. Su textura ligera facilita su uso y aplicación. Disponible en varios tonos según la escala de Fitzpatrick del 1 al 5.",
+    "description": "La crema hidratante ACTIVE HYDRATOR para piel normal a seca es una crema hidratante de alta calidad, científicamente probada para mejorar el nivel de hidratación de la piel en un 25 %. Restaura la hidratación natural de la piel gracias a sus SMART-HYDRATORS (hidratantes inteligentes), aportándole luminosidad, firmeza y suavidad propias de una piel joven y sana. Repara y renueva la piel, proporcionándole la máxima hidratación. Su uso regular ayuda a prevenir los signos del envejecimiento.",
     "image": "/Products/Antiedad/HIDRATANTE-ACTIVO-CREMA-HUMECTANTE-PARA-PIEL-NORMAL-A-SECA.webp"
   },
   {
-    "id": "",
-    "name": "Maquillaje: desenfocar y corregir (1-5 según la escala de Fitzpatrick)",
+    "id": "hidratante-activo-crema-humectante-para-piel-muy-seca",
+    "name": "HIDRATANTE ACTIVO / CREMA HUMECTANTE PARA PIEL MUY SECA",
     "category": "antiedad",
-    "description": "Maquillaje no comedogénico y no graso, especialmente indicado para pieles con acné. Difumina y disimula imperfecciones y marcas en la piel. Proporciona un aspecto natural y saludable. Su textura ligera facilita su uso y aplicación. Disponible en varios tonos según la escala de Fitzpatrick del 1 al 5.",
+    "description": "La crema hidratante ACTIVE HYDRATOR para piel muy seca es una crema de alta calidad, científicamente probada para mejorar el nivel de hidratación de la piel en un 25 %. Restaura la hidratación natural de la piel gracias a sus SMART-HYDRATORS (hidratantes inteligentes), aportándole luminosidad, firmeza y suavidad propias de una piel joven y sana. Repara y renueva la piel, proporcionándole la máxima hidratación. Su uso regular ayuda a prevenir los signos del envejecimiento.",
     "image": "/Products/Antiedad/hidratante-activo-crema-humectante-piel-seca.webp"
   },
   {
-    "id": "",
-    "name": "Maquillaje: desenfocar y corregir (1-5 según la escala de Fitzpatrick)",
+    "id": "limpiador-profundo-para-todo-tipo-de-piel-sin-sls",
+    "name": "LIMPIADOR PROFUNDO PARA TODO TIPO DE PIEL – SIN SLS",
     "category": "antiedad",
-    "description": "Maquillaje no comedogénico y no graso, especialmente indicado para pieles con acné. Difumina y disimula imperfecciones y marcas en la piel. Proporciona un aspecto natural y saludable. Su textura ligera facilita su uso y aplicación. Disponible en varios tonos según la escala de Fitzpatrick del 1 al 5.",
+    "description": "La espuma limpiadora profunda para todo tipo de piel limpia en profundidad la piel del rostro sin resecarla. Prepara la piel para absorber mejor los productos activos que se apliquen posteriormente, dejando una agradable sensación de frescor. Es ideal para todo tipo de piel.",
     "image": "/Products/Antiedad/limpiador-profundo-para-todo-tiopo-de-piel–sinsls.webp"
   },
   {
-    "id": "",
-    "name": "Maquillaje: desenfocar y corregir (1-5 según la escala de Fitzpatrick)",
+    "id": "mascara-de-pulido-doble",
+    "name": "MÁSCARA DE PULIDO DOBLE",
     "category": "antiedad",
-    "description": "Maquillaje no comedogénico y no graso, especialmente indicado para pieles con acné. Difumina y disimula imperfecciones y marcas en la piel. Proporciona un aspecto natural y saludable. Su textura ligera facilita su uso y aplicación. Disponible en varios tonos según la escala de Fitzpatrick del 1 al 5.",
+    "description": "Una mascarilla diseñada para exfoliar y pulir, que tras su uso deja la piel suave, tersa al tacto y con un brillo instantáneo. Su doble acción exfoliante y nutritiva se debe a sus ingredientes activos, que se liberan durante la exfoliación y transforman el color de la mascarilla.",
     "image": "/Products/Antiedad/mascara-de-pulido-doble.webp"
   },
   {
-    "id": "",
-    "name": "Maquillaje: desenfocar y corregir (1-5 según la escala de Fitzpatrick)",
+    "id": "mascarilla-superhidratante",
+    "name": "MASCARILLA SUPERHIDRATANTE",
     "category": "antiedad",
-    "description": "Maquillaje no comedogénico y no graso, especialmente indicado para pieles con acné. Difumina y disimula imperfecciones y marcas en la piel. Proporciona un aspecto natural y saludable. Su textura ligera facilita su uso y aplicación. Disponible en varios tonos según la escala de Fitzpatrick del 1 al 5.",
+    "description": "Una mascarilla intensiva que hidrata profundamente la piel durante un tiempo prolongado. Una innovadora mascarilla hidratante que combate la sequedad cutánea en el clima israelí, proporcionando una hidratación extremadamente profunda. Gracias a sus componentes únicos, cuya eficacia está comprobada, este producto mejora la textura de la piel inmediatamente después de su uso. Se absorbe rápidamente e hidrata profundamente, siendo ideal para pieles sensibles, delicadas y secas.",
     "image": "/Products/Antiedad/mascarilla-superhidratante.webp"
   },
   {
-    "id": "",
-    "name": "Maquillaje: desenfocar y corregir (1-5 según la escala de Fitzpatrick)",
+    "id": "reparacion-totañ-de-la-zona-ocular",
+    "name": "REPARACIÓN TOTAL DE LA ZONA OCULAR",
     "category": "antiedad",
-    "description": "Maquillaje no comedogénico y no graso, especialmente indicado para pieles con acné. Difumina y disimula imperfecciones y marcas en la piel. Proporciona un aspecto natural y saludable. Su textura ligera facilita su uso y aplicación. Disponible en varios tonos según la escala de Fitzpatrick del 1 al 5.",
+    "description": "Ahora podrá reducir significativamente las manchas de la edad alrededor de los ojos con EYE ZONE TOTAL REPAIR. Esta crema combina los cuatro componentes más potentes para tratar las arrugas. EYE ZONE TOTAL REPAIR hidrata profundamente la piel y le proporciona un aspecto joven, suave y luminoso. También reduce la hinchazón y la ojera. Se utiliza como crema terapéutica y para prevenir el envejecimiento en el contorno de los ojos.",
     "image": "/Products/Antiedad/reparacion-total-zona-ocular.webp"
   },
   {
-    "id": "",
-    "name": "Maquillaje: desenfocar y corregir (1-5 según la escala de Fitzpatrick)",
+    "id": "serum-hidratante-acido-hialuronico-nueva-generacion",
+    "name": "SÉRUM HIDRATANTE + ÁCIDO HIALURÓNICO DE NUEVA GENERACIÓN",
     "category": "antiedad",
-    "description": "Maquillaje no comedogénico y no graso, especialmente indicado para pieles con acné. Difumina y disimula imperfecciones y marcas en la piel. Proporciona un aspecto natural y saludable. Su textura ligera facilita su uso y aplicación. Disponible en varios tonos según la escala de Fitzpatrick del 1 al 5.",
+    "description": "Previene el envejecimiento y ofrece una alta protección contra el daño cutáneo gracias a un ácido hialurónico único. Hidrata mediante la inserción de nuevas moléculas de ácido hialurónico de bajo grado y moléculas con un peso molecular inferior a 500 Dalton. Además, trata la inflamación subcutánea que provoca el envejecimiento de la piel. El sérum contiene humectantes adicionales que nutren la piel.",
     "image": "/Products/Antiedad/serum-hidratante-acido-hialuronico-nueva-generacion.webp"
   },
   {
-    "id": "",
-    "name": "Maquillaje: desenfocar y corregir (1-5 según la escala de Fitzpatrick)",
+    "id": "24-sérum-hidratante-e-iluminador",
+    "name": "Maquillaje: 24 SÉRUM HIDRATANTE E ILUMINADOR",
     "category": "antiedad",
-    "description": "Maquillaje no comedogénico y no graso, especialmente indicado para pieles con acné. Difumina y disimula imperfecciones y marcas en la piel. Proporciona un aspecto natural y saludable. Su textura ligera facilita su uso y aplicación. Disponible en varios tonos según la escala de Fitzpatrick del 1 al 5.",
+    "description": "¡Consigue la luminosidad que siempre has deseado y recibe halagos de quienes te rodean! Gracias a su tecnología de vanguardia, el Sérum 24 deja la piel hidratada y suave al tacto durante todo el día. Especialmente indicado para pieles secas o deshidratadas. Aporta luminosidad instantánea. Estimula la producción natural de ceramidas y diversos componentes lipídicos, esenciales para la estructura de la membrana celular, lo que retrasa el envejecimiento cutáneo al preservar la estructura celular en las zonas de aplicación.",
     "image": "/Products/Antiedad/serum-hidratante-luminoso-24.webp"
   },
   {
-    "id": "",
-    "name": "Maquillaje: desenfocar y corregir (1-5 según la escala de Fitzpatrick)",
+    "id": "serum-protect-vit-c-antioxidantes",
+    "name": "SERUM PROTECT VIT. C + ANTIOXIDANTES",
     "category": "antiedad",
-    "description": "Maquillaje no comedogénico y no graso, especialmente indicado para pieles con acné. Difumina y disimula imperfecciones y marcas en la piel. Proporciona un aspecto natural y saludable. Su textura ligera facilita su uso y aplicación. Disponible en varios tonos según la escala de Fitzpatrick del 1 al 5.",
+    "description": "Los radicales libres son moléculas inestables que se crean, entre otras cosas, como resultado de la contaminación y la luz solar. Los radicales libres pueden dañar los electrones de la piel, lo que provoca inflamación, tono desigual y signos de envejecimiento prematuro. Los antioxidantes ayudan a prevenir este tipo de daños neutralizando y equilibrando los radicales libres, evitando así el daño a la piel. El uso de una preparación que contenga superantioxidantes repara, rehabilita y previene el envejecimiento, además de proteger la piel contra el daño. Neutraliza los radicales libres de la forma más eficaz y potente posible, previene y trata la glicación. Contiene varios tipos de neutralizadores de radicales libres y 3 tipos de vitamina C estable.",
     "image": "/Products/Antiedad/serum-protect-vit-c-antioxidantes.webp"
   },
   {
-    "id": "",
-    "name": "Maquillaje: desenfocar y corregir (1-5 según la escala de Fitzpatrick)",
+    "id": "serum-reparador-de-arrugas-definitivo",
+    "name": "SÉRUM REPARADOR DEFINITIVO DE ARRUGAS",
     "category": "antiedad",
-    "description": "Maquillaje no comedogénico y no graso, especialmente indicado para pieles con acné. Difumina y disimula imperfecciones y marcas en la piel. Proporciona un aspecto natural y saludable. Su textura ligera facilita su uso y aplicación. Disponible en varios tonos según la escala de Fitzpatrick del 1 al 5.",
+    "description": "El sérum antiedad definitivo, con la última tecnología ULTIMATE WRINKLE REPAIR SERUM, proporciona a tu piel un aspecto juvenil sin precedentes y la deja suave y tersa al tacto. Científicamente probado como corrector y preventivo de arrugas, según estudios, reduce aproximadamente el 70 % de la longitud y profundidad de las arrugas en tan solo 28 días. Los resultados pueden variar según la edad y el estado de la piel.",
     "image": "/Products/Antiedad/serum-reparador-de-arrugas-definitivo.webp"
   },
   {
-    "id": "",
-    "name": "Maquillaje: desenfocar y corregir (1-5 según la escala de Fitzpatrick)",
+    "id": "total-repair-forte",
+    "name": "REPARACIÓN TOTAL FORTE",
     "category": "antiedad",
-    "description": "Maquillaje no comedogénico y no graso, especialmente indicado para pieles con acné. Difumina y disimula imperfecciones y marcas en la piel. Proporciona un aspecto natural y saludable. Su textura ligera facilita su uso y aplicación. Disponible en varios tonos según la escala de Fitzpatrick del 1 al 5.",
+    "description": "TOTAL REPAIR FORTE es una crema innovadora y reforzada que renueva la piel de forma sorprendente, con resultados probados y seguros. Gracias a una combinación única de materias primas, mejora notablemente el aspecto de la piel, proporciona una renovación inmediata, produce una ligera elasticidad, un sutil tono rosado y deja la piel con un aspecto radiante y juvenil. Una de las cremas más importantes para el tratamiento del envejecimiento cutáneo.",
     "image": "/Products/Antiedad/total-repair-forte.webp"
   },
   {
-    "id": "",
-    "name": "Maquillaje: desenfocar y corregir (1-5 según la escala de Fitzpatrick)",
+    "id": "total-repair-rx",
+    "name": "REPARACIÓN TOTAL RX",
     "category": "antiedad",
-    "description": "Maquillaje no comedogénico y no graso, especialmente indicado para pieles con acné. Difumina y disimula imperfecciones y marcas en la piel. Proporciona un aspecto natural y saludable. Su textura ligera facilita su uso y aplicación. Disponible en varios tonos según la escala de Fitzpatrick del 1 al 5.",
+    "description": "TOTAL REPAIR RX es una crema innovadora que renueva la piel de forma sorprendente, con resultados seguros y comprobados. Su fórmula elimina las arrugas y reduce significativamente las más profundas. Gracias a la combinación de ingredientes únicos, mejora notablemente el aspecto de la piel. La rejuvenece al instante, la reafirma ligeramente y le da un tono rosado y juvenil. Una de las cremas más importantes para el tratamiento del envejecimiento cutáneo.",
     "image": "/Products/Antiedad/total-repair-rx.webp"
   }
 ]
