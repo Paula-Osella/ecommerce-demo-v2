@@ -1,0 +1,689 @@
+---
+import Header from "../layouts/Header.astro";
+import Footer from "../layouts/Footer.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+
+// Datos de los kits
+const kitsData = {
+    acne: [
+        {
+            title: "Kit Acné Inflamatorio",
+            image: "/Kitss/Acne.webp",
+            description: "Un kit que trata el acné inflamatorio y altamente inflamatorio, con productos que tienen propiedades antibacterianas y antiinflamatorias potentes.",
+            products: [
+                "LIMPIADOR PROFUNDO PARA PIEL PROBLEMÁTICA",
+                "ACNE BIO",
+                "TRIPLE ACNE GEL",
+                "HIDRATANTE PROFUNDO + SPF 25 PARA PIEL GRASA A NORMAL",
+                "ULTRA HIDRATANTE PARA PIEL GRASA"
+            ],
+            details: [
+                {
+                    product: "LIMPIADOR PROFUNDO PARA PIEL PROBLEMÁTICA",
+                    description: "Equilibra el nivel de grasa en la piel y permite que los ingredientes activos penetren profundamente sin dañar la humedad natural."
+                },
+                {
+                    product: "ACNE BIO",
+                    description: "Elimina bacterias por contacto y tiene un fuerte efecto antibacteriano y antiinflamatorio."
+                },
+                {
+                    product: "TRIPLE ACNE GEL",
+                    description: "Reduce la producción de grasa subcutánea y previene brotes futuros."
+                },
+                {
+                    product: "HIDRATANTE PROFUNDO + SPF 25",
+                    description: "No comedogénico, no obstruye los poros y es adecuado para el tratamiento de piel propensa al acné."
+                },
+                {
+                    product: "ULTRA HIDRATANTE PARA PIEL GRASA",
+                    description: "Tiene efecto antiinflamatorio y promueve hidratación profunda sin activar procesos inflamatorios."
+                }
+            ]
+        },
+        {
+            title: "Kit Acné Comedogénico (sin inflamación)",
+            image: "/Kitss/Acne.webp",
+            description: "Un kit de cuidado que contiene productos que abren poros obstruidos, rejuvenecen la piel y exfolian para lograr una piel suave sin acné.",
+            products: [
+                "LIMPIADOR PROFUNDO PARA PIEL PROBLEMÁTICA",
+                "REPAIR LIQUID",
+                "TRIPLE ACNE GEL",
+                "HIDRATANTE PROFUNDO + SPF 25",
+                "ULTRA HIDRATANTE PARA PIEL GRASA"
+            ],
+            details: [
+                {
+                    product: "LIMPIADOR PROFUNDO",
+                    description: "Equilibra el nivel de grasa y permite penetración profunda de ingredientes activos."
+                },
+                {
+                    product: "REPAIR LIQUID",
+                    description: "Trata comedones blancos y negros, exfolia suavemente y reduce la producción de sebo."
+                },
+                {
+                    product: "TRIPLE ACNE GEL",
+                    description: "Reduce la producción de grasa subcutánea y previene brotes futuros."
+                }
+            ]
+        },
+        {
+            title: "Kit Combinado para Acné (inflamatorio + comedogénico)",
+            image: "/Kitss/Acne.webp",
+            description: "¡El mejor kit para el tratamiento del acné! Diseñado para tratar acné inflamatorio, comedogénico o combinado, con instrucciones apropiadas para enfocar el tratamiento.",
+            products: [
+                "LIMPIADOR PROFUNDO PARA PIEL PROBLEMÁTICA",
+                "REPAIR LIQUID",
+                "ACNE BIO",
+                "TRIPLE ACNE GEL",
+                "BIO ULTRA – CALM CREAM",
+                "HIDRATANTE PROFUNDO + SPF 25"
+            ],
+            details: [
+                {
+                    product: "BIO ULTRA – CALM CREAM",
+                    description: "Efecto sedante instantáneo fuerte y efectivo para rojeces, alergias y sequedad excesiva."
+                }
+            ]
+        },
+        {
+            title: "Kit Post-Acné (Cicatrices)",
+            image: "/Kitss/Acne.webp",
+            description: "Kit para el tratamiento de post-acné, irregularidades e hiperpigmentación.",
+            products: [
+                "B-WHITE CLEANSER FOAM",
+                "GALA CREAM + ÁCIDO HIALURÓNICO",
+                "TOTAL REPAIR FORTE",
+                "BLOCK SPF 50",
+                "ULTRA HIDRATANTE PARA PIEL GRASA"
+            ],
+            details: [
+                {
+                    product: "GALA CREAM + ÁCIDO HIALURÓNICO",
+                    description: "Rejuvenecimiento e hidratación profunda. Promueve la formación de nuevas fibras de colágeno."
+                },
+                {
+                    product: "TOTAL REPAIR FORTE",
+                    description: "Efecto innovador en renovación cutánea. Mejora significativamente la apariencia, suaviza arrugas y elimina cicatrices."
+                }
+            ]
+        }
+    ],
+    antiaging: [
+        {
+            title: "Kit Anti-Edad para Piel Normal y Seca",
+            image: "/Kitss/Antienvejecimiento.webp",
+            description: "Un kit para prevenir arrugas, rejuvenecer y fortalecer la piel.",
+            products: [
+                "B-WHITE CLEANSER FOAM",
+                "TOTAL REPAIR RX (crema nocturna restauradora)",
+                "MICROPEEL RECOVERY CREAM (crema de día)",
+                "BLOCK SPF 50"
+            ],
+            details: [
+                {
+                    product: "TOTAL REPAIR RX",
+                    description: "Producto nocturno con efecto asombroso en renovación cutánea. Suaviza arrugas, fortalece la piel y neutraliza radicales libres."
+                },
+                {
+                    product: "MICROPEEL RECOVERY CREAM",
+                    description: "Diseñada para rejuvenecer la piel con tecnología única que elimina células muertas y estimula regeneración celular."
+                },
+                {
+                    product: "BLOCK SPF 50",
+                    description: "Filtra luz solar dañina de rayos UVB y UVA. Contiene ingredientes calmantes y antioxidantes."
+                }
+            ]
+        },
+        {
+            title: "Kit Anti-Edad Forte",
+            image: "/Kitss/Antienvejecimiento.webp",
+            description: "Un kit para prevenir arrugas, renovar y fortalecer la piel – ¡en fórmula reforzada y segura!",
+            products: [
+                "LIMPIADOR PROFUNDO PARA TODO TIPO DE PIEL",
+                "TOTAL REPAIR FORTE",
+                "MICROPEEL RECOVERY CREAM",
+                "BLOCK SPF 50"
+            ],
+            details: [
+                {
+                    product: "TOTAL REPAIR FORTE",
+                    description: "Producto innovador con efecto increíble en renovación cutánea. Mejora significativamente la apariencia de la piel, suaviza arrugas y fortalece. Uno de los productos más importantes para el tratamiento del envejecimiento cutáneo."
+                }
+            ]
+        },
+        {
+            title: "Kit Anti-Edad VIP",
+            image: "/Kitss/Antienvejecimiento.webp",
+            description: "Un kit premium para prevenir arrugas y renovar la piel – ¡fórmula reforzada con serums!",
+            products: [
+                "LIMPIADOR PROFUNDO",
+                "TOTAL REPAIR RX",
+                "MICROPEEL RECOVERY CREAM",
+                "BLOCK SPF 50",
+                "ULTIMATE WRINKLE SERUM",
+                "SERUM HYDRATE (fragmentos de ácido hialurónico)"
+            ],
+            details: [
+                {
+                    product: "ULTIMATE WRINKLE SERUM",
+                    description: "Serum anti-edad con última tecnología, contiene los mejores productos anti-arrugas del mundo. Científicamente comprobado que corrige el 70% de la longitud y profundidad de arrugas en 28 días."
+                },
+                {
+                    product: "SERUM HYDRATE",
+                    description: "Proporciona humedad interna gracias a fragmentos de ácido hialurónico de nueva generación en moléculas pequeñas permeables."
+                }
+            ]
+        },
+        {
+            title: "Kit Verano Anti-Edad",
+            image: "/Kitss/Antienvejecimiento.webp",
+            description: "Un kit para prevenir arrugas y fortalecer la piel – ideal para la temporada de verano.",
+            products: [
+                "LIMPIADOR PROFUNDO",
+                "ULTIMATE WRINKLE SERUM",
+                "MICROPEEL RECOVERY CREAM",
+                "BLOCK SPF 50"
+            ]
+        }
+    ],
+    pigmentation: [
+        {
+            title: "Kit Pigmentación (embarazo y lactancia)",
+            image: "/Kitss/Pigmentación.webp",
+            description: "Un kit para pigmentación o presencia de manchas para desarrollar un tono de piel uniforme. Seguro durante embarazo y lactancia.",
+            products: [
+                "B-WHITE CLEANSER FOAM",
+                "B-WHITE CREAM",
+                "B-WHITE GEL",
+                "PIGMENTO NEW SKIN",
+                "BLOCK SPF 50"
+            ],
+            details: [
+                {
+                    product: "B-WHITE CREAM",
+                    description: "El producto más efectivo desarrollado hasta la fecha para efecto aclarante. 3 acciones: aclara y destruye manchas existentes, reduce inmediatamente la producción de melanina y previene nuevas manchas."
+                },
+                {
+                    product: "B-WHITE GEL",
+                    description: "Gel terapéutico concentrado especial diseñado para resolver problemas de manchas. Doble efecto de sustancias aclaradoras."
+                },
+                {
+                    product: "PIGMENTO NEW SKIN",
+                    description: "Supresor fuerte de melanina. Adecuado durante embarazo y lactancia. No irrita ni pela."
+                }
+            ]
+        },
+        {
+            title: "Kit Pigmentación 'WHITE PLUS'",
+            image: "/Kitss/Pigmentación.webp",
+            description: "El kit aclarante perfecto para tratamiento de manchas solares/hormonales y tono de piel desigual. ¡NO apto para embarazadas o en lactancia!",
+            products: [
+                "B-WHITE CLEANSER FOAM",
+                "WHITE INTENSIVE LIQUIGEL",
+                "WHITE BOOSTER LIQUIGEL",
+                "WHITE ACTIVATOR LIQUIGEL",
+                "BLOCK SPF 50",
+                "HIDRATANTE ACTIVO"
+            ],
+            details: [
+                {
+                    product: "WHITE INTENSIVE LIQUIGEL",
+                    description: "Tratamiento para pigmentación causada por sol, hormonas y post-acné. Combina ingredientes de alta tecnología y naturales. Suprime producción de melanina y descompone manchas existentes."
+                },
+                {
+                    product: "WHITE BOOSTER LIQUIGEL",
+                    description: "Producto innovador para tratar pigmentación renovando y reafirmando la piel. Producto potente con resultados excepcionales."
+                },
+                {
+                    product: "WHITE ACTIVATOR LIQUIGEL",
+                    description: "Gel de textura ligera que permite la dilución de productos activos. Mejora penetración y calma la piel."
+                }
+            ]
+        },
+        {
+            title: "Kit Combinado Arrugas y Manchas",
+            image: "/Kitss/Pigmentación.webp",
+            description: "La solución perfecta para tratamiento combinado de arrugas y pigmentación. ¡NO apto para embarazadas o en lactancia!",
+            products: [
+                "B-WHITE CLEANSER FOAM",
+                "B-WHITE CREAM",
+                "PIGMENTO NEW SKIN",
+                "TOTAL REPAIR RX",
+                "BLOCK SPF 50",
+                "HIDRATANTE ACTIVO"
+            ],
+            details: [
+                {
+                    product: "TOTAL REPAIR RX",
+                    description: "Producto nocturno con fórmula innovadora que tiene efecto asombroso en renovación cutánea. Uno de los productos más importantes para terapia de envejecimiento."
+                }
+            ]
+        },
+        {
+            title: "Kit Manchas Post-Acné (rojas y marrones)",
+            image: "/Kitss/Pigmentación.webp",
+            description: "Solución perfecta diseñada para tratamiento de pigmentación post-acné. ¡NO apto para embarazadas o en lactancia!",
+            products: [
+                "B-WHITE CLEANSER FOAM",
+                "B-WHITE GEL",
+                "PIGMENTO NEW SKIN",
+                "TOTAL REPAIR RX",
+                "ULTRA HIDRATANTE PARA PIEL GRASA"
+            ]
+        }
+    ]
+};
+---
+
+<MainLayout
+    title="Kits de Cuidado Facial – Rutinas Completas y Tratamientos Combinados | Alvit Eclat"
+    description="Descubrí nuestros kits de cuidado facial diseñados para potenciar resultados: combos antiedad, hidratación, limpieza, luminosidad y más. Rutinas listas para usar con productos de alta calidad."
+>
+    <Header />
+
+    <!-- HERO SECTION -->
+    <section class="w-full bg-gradient-to-br from-pink-50 via-white to-purple-50 py-16 px-6">
+        <div class="max-w-5xl mx-auto text-center">
+            
+            <span class="inline-block px-4 py-2 bg-pink-100 text-pink-700 rounded-full text-xs font-semibold tracking-wider uppercase mb-4">
+                Soluciones Completas
+            </span>
+
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                Kits Universales Listos para Usar<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600">
+                    Adaptables a Cada Cliente
+                </span>
+            </h1>
+
+            <div class="max-w-3xl mx-auto space-y-4 text-gray-700 text-lg leading-relaxed">
+                <p>
+                    Dermalosophy se fundó en Israel en 2010 y desde entonces ofrece soluciones dermatológicas utilizando una amplia gama de productos activos para el cuidado de la piel en el hogar y clínicas profesionales, que se venden a través de los principales expertos en cuidado de la piel del país.
+                </p>
+
+                <p>
+                    El principio rector de 'Dermalosophy' es brindar a los clientes los <strong class="text-gray-900">mejores y más rápidos resultados</strong> disponibles en el mundo hoy en día, utilizando ingredientes únicos seleccionados, que están probados en estudios clínicos con resultados sorprendentes.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CATEGORY TABS -->
+    <section class="w-full bg-white py-12 px-6 sticky top-0 z-40 shadow-md">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-wrap gap-3 justify-center">
+                <button class="category-btn active" data-category="acne">
+                    <span class="icon">🎯</span>
+                    <span>Acné</span>
+                </button>
+                <button class="category-btn" data-category="antiaging">
+                    <span class="icon">✨</span>
+                    <span>Anti-Envejecimiento</span>
+                </button>
+                <button class="category-btn" data-category="pigmentation">
+                    <span class="icon">🌟</span>
+                    <span>Pigmentación</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- KITS CONTENT -->
+    <section class="w-full px-6 py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+
+            <!-- ACNE KITS -->
+            <div class="kits-container active" data-category="acne">
+                {kitsData.acne.map((kit, index) => (
+                    <div class="kit-card mb-16">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+                            
+                            <!-- Imagen -->
+                            <div class="order-2 lg:order-1">
+                                <div class="relative">
+                                    <div class="absolute -inset-4 bg-gradient-to-r from-pink-200 to-purple-200 rounded-2xl blur-2xl opacity-30"></div>
+                                    <img 
+                                        src={kit.image} 
+                                        alt={kit.title}
+                                        class="relative w-full h-[400px] object-cover rounded-2xl shadow-xl"
+                                    />
+                                </div>
+                            </div>
+
+                            <!-- Contenido -->
+                            <div class="order-1 lg:order-2">
+                                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                                    {kit.title}
+                                </h2>
+                                
+                                <p class="text-gray-700 leading-relaxed mb-6">
+                                    {kit.description}
+                                </p>
+
+                                <div class="bg-pink-50 rounded-xl p-6 mb-6">
+                                    <h3 class="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                                        <span class="text-pink-600">📦</span>
+                                        El kit contiene {kit.products.length} productos:
+                                    </h3>
+                                    <ul class="space-y-2">
+                                        {kit.products.map((product) => (
+                                            <li class="flex items-start gap-2 text-gray-700">
+                                                <span class="text-pink-500 mt-1">•</span>
+                                                <span class="font-medium">{product}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+
+                                <button class="details-toggle-btn group inline-flex items-center gap-2 text-pink-600 hover:text-pink-700 font-semibold transition-colors">
+                                    <span>Ver detalles de productos</span>
+                                    <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+
+                                <div class="details-content hidden mt-6 space-y-4 border-t border-gray-200 pt-6">
+                                    {kit.details.map((detail) => (
+                                        <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-100">
+                                            <h4 class="font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                                                <span class="text-purple-600">✓</span>
+                                                {detail.product}
+                                            </h4>
+                                            <p class="text-gray-600 text-sm leading-relaxed pl-6">
+                                                {detail.description}
+                                            </p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                ))}
+            </div>
+
+            <!-- ANTI-AGING KITS -->
+            <div class="kits-container hidden" data-category="antiaging">
+                {kitsData.antiaging.map((kit, index) => (
+                    <div class="kit-card mb-16">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+                            
+                            <div class="order-2 lg:order-1">
+                                <div class="relative">
+                                    <div class="absolute -inset-4 bg-gradient-to-r from-pink-200 to-purple-200 rounded-2xl blur-2xl opacity-30"></div>
+                                    <img 
+                                        src={kit.image} 
+                                        alt={kit.title}
+                                        class="relative w-full h-[400px] object-cover rounded-2xl shadow-xl"
+                                    />
+                                </div>
+                            </div>
+
+                            <div class="order-1 lg:order-2">
+                                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                                    {kit.title}
+                                </h2>
+                                
+                                <p class="text-gray-700 leading-relaxed mb-6">
+                                    {kit.description}
+                                </p>
+
+                                <div class="bg-purple-50 rounded-xl p-6 mb-6">
+                                    <h3 class="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                                        <span class="text-purple-600">📦</span>
+                                        El kit contiene {kit.products.length} productos:
+                                    </h3>
+                                    <ul class="space-y-2">
+                                        {kit.products.map((product) => (
+                                            <li class="flex items-start gap-2 text-gray-700">
+                                                <span class="text-purple-500 mt-1">•</span>
+                                                <span class="font-medium">{product}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+
+                                {kit.details && (
+                                    <>
+                                        <button class="details-toggle-btn group inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-semibold transition-colors">
+                                            <span>Ver detalles de productos</span>
+                                            <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                            </svg>
+                                        </button>
+
+                                        <div class="details-content hidden mt-6 space-y-4 border-t border-gray-200 pt-6">
+                                            {kit.details.map((detail) => (
+                                                <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-100">
+                                                    <h4 class="font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                                                        <span class="text-purple-600">✓</span>
+                                                        {detail.product}
+                                                    </h4>
+                                                    <p class="text-gray-600 text-sm leading-relaxed pl-6">
+                                                        {detail.description}
+                                                    </p>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </>
+                                )}
+                            </div>
+
+                        </div>
+                    </div>
+                ))}
+            </div>
+
+            <!-- PIGMENTATION KITS -->
+            <div class="kits-container hidden" data-category="pigmentation">
+                {kitsData.pigmentation.map((kit, index) => (
+                    <div class="kit-card mb-16">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+                            
+                            <div class="order-2 lg:order-1">
+                                <div class="relative">
+                                    <div class="absolute -inset-4 bg-gradient-to-r from-pink-200 to-purple-200 rounded-2xl blur-2xl opacity-30"></div>
+                                    <img 
+                                        src={kit.image} 
+                                        alt={kit.title}
+                                        class="relative w-full h-[400px] object-cover rounded-2xl shadow-xl"
+                                    />
+                                </div>
+                            </div>
+
+                            <div class="order-1 lg:order-2">
+                                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                                    {kit.title}
+                                </h2>
+                                
+                                <p class="text-gray-700 leading-relaxed mb-6">
+                                    {kit.description}
+                                </p>
+
+                                <div class="bg-amber-50 rounded-xl p-6 mb-6">
+                                    <h3 class="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                                        <span class="text-amber-600">📦</span>
+                                        El kit contiene {kit.products.length} productos:
+                                    </h3>
+                                    <ul class="space-y-2">
+                                        {kit.products.map((product) => (
+                                            <li class="flex items-start gap-2 text-gray-700">
+                                                <span class="text-amber-500 mt-1">•</span>
+                                                <span class="font-medium">{product}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+
+                                {kit.details && (
+                                    <>
+                                        <button class="details-toggle-btn group inline-flex items-center gap-2 text-amber-600 hover:text-amber-700 font-semibold transition-colors">
+                                            <span>Ver detalles de productos</span>
+                                            <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                            </svg>
+                                        </button>
+
+                                        <div class="details-content hidden mt-6 space-y-4 border-t border-gray-200 pt-6">
+                                            {kit.details.map((detail) => (
+                                                <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-100">
+                                                    <h4 class="font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                                                        <span class="text-amber-600">✓</span>
+                                                        {detail.product}
+                                                    </h4>
+                                                    <p class="text-gray-600 text-sm leading-relaxed pl-6">
+                                                        {detail.description}
+                                                    </p>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </>
+                                )}
+                            </div>
+
+                        </div>
+                    </div>
+                ))}
+            </div>
+
+        </div>
+    </section>
+
+    <Footer />
+</MainLayout>
+
+<style>
+    .category-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        border-radius: 9999px;
+        font-weight: 600;
+        border: 2px solid #d1d5db;
+        background-color: white;
+        color: #374151;
+        transition: all 0.3s ease;
+    }
+
+    .category-btn:hover {
+        border-color: #fbcfe8;
+        background-color: #fdf2f8;
+        transform: scale(1.05);
+    }
+
+    .category-btn.active {
+        border-color: #ec4899;
+        background: linear-gradient(to right, #ec4899, #9333ea);
+        color: white;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    .category-btn .icon {
+        font-size: 1.25rem;
+    }
+
+    .kits-container {
+        display: none;
+        animation: fadeIn 0.5s ease-in;
+    }
+
+    .kits-container.active {
+        display: block;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .kit-card {
+        animation: slideInUp 0.6s ease-out;
+    }
+
+    @keyframes slideInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .details-content {
+        animation: expandDown 0.3s ease-out;
+    }
+
+    @keyframes expandDown {
+        from {
+            opacity: 0;
+            max-height: 0;
+        }
+        to {
+            opacity: 1;
+            max-height: 2000px;
+        }
+    }
+</style>
+
+<script>
+    // Category switching
+    const categoryBtns = document.querySelectorAll('.category-btn');
+    const kitsContainers = document.querySelectorAll('.kits-container');
+
+    categoryBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const category = btn.getAttribute('data-category');
+
+            // Update active button
+            categoryBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Show corresponding kits
+            kitsContainers.forEach(container => {
+                if (container.getAttribute('data-category') === category) {
+                    container.classList.remove('hidden');
+                    container.classList.add('active');
+                } else {
+                    container.classList.add('hidden');
+                    container.classList.remove('active');
+                }
+            });
+
+            // Scroll to kits section smoothly
+            window.scrollTo({
+                top: document.querySelector('.kits-container.active').offsetTop - 100,
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Details toggle functionality
+    const detailsToggles = document.querySelectorAll('.details-toggle-btn');
+
+    detailsToggles.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector('svg');
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+                btn.querySelector('span').textContent = 'Ocultar detalles';
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+                btn.querySelector('span').textContent = 'Ver detalles de productos';
+            }
+        });
+    });
+</script>
