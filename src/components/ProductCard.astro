@@ -39,8 +39,6 @@ const ingredientsBlock = (() => {
 })();
 ---
 
-
-
 <article class="group flex flex-col product-card">
   <a href={`/product/${product.id}`} class="block mb-3">
     <div class="product-card-image">
@@ -59,7 +57,11 @@ const ingredientsBlock = (() => {
 
     <button
       class="text-xs font-semibold underline text-zinc-800 text-left w-fit hover:text-black"
-      onclick={`document.getElementById('${modalId}')?.showModal()`}
+      onclick={`
+        const d = document.getElementById('${modalId}');
+        d?.showModal();
+        d.scrollTop = 0; // ✅ arranca arriba siempre
+      `}
       type="button"
     >
       Más información
@@ -104,6 +106,15 @@ const ingredientsBlock = (() => {
           </p>
         </div>
       )}
+
+      {/* ✅ Imagen de iconos al final del modal */}
+      <div class="modal-badges">
+        <img 
+          src="/Products/ingredientes/ingredientes.jpg" 
+          alt="Características del producto"
+          loading="lazy"
+        />
+      </div>
     </div>
   </dialog>
 </article>
@@ -134,5 +145,20 @@ const ingredientsBlock = (() => {
     background: transparent;
     border: none;
     cursor: pointer;
+  }
+
+  /* ✅ Iconos informativos */
+  .modal-badges{
+    margin-top: 18px;
+    padding-top: 12px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: center;
+  }
+
+  .modal-badges img{
+    max-width: 100%;
+    height: auto;
+    display: block;
   }
 </style>

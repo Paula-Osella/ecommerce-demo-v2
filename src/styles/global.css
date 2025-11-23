@@ -106,3 +106,23 @@
   flex-direction: column;
   gap: 1.75rem;
 }
+  .modal-badges{
+    margin-top: 18px;
+    padding-top: 12px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: center;
+  }
+
+  .modal-badges img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+
+.products-grid.is-filtering {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .15s ease;
+}
