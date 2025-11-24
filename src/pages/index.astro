@@ -3,22 +3,23 @@ import Header from "../layouts/Header.astro";
 import Footer from "../layouts/Footer.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 
+// ✅ ÚNICA DECLARACIÓN DE COLLECTIONS
 const collections = [
   {
-    id: "antiage-kit",
-    name: "Kit Antienvejecimiento",
-    description: "Serum + crema de día + contorno para suavizar líneas finas.",
+    id: 'kit-acne',
+    name: 'Kit Anti-Acné',
+    description: 'Tratamiento completo para piel con acné'
   },
   {
-    id: "acne-kit",
-    name: "Kit Control Acné",
-    description: "Limpieza, tratamiento focalizado e hidratación liviana.",
+    id: 'kit-antiedad',
+    name: 'Kit Anti-Edad',
+    description: 'Rutina completa para combatir el envejecimiento'
   },
   {
-    id: "hidratacion-kit",
-    name: "Kit Hidratación Intensa",
-    description: "Rutina básica para devolverle confort y elasticidad a la piel.",
-  },
+    id: 'kit-pigmentacion',
+    name: 'Kit Pigmentación',
+    description: 'Solución para manchas y tono desigual'
+  }
 ];
 
 const reviews = [
@@ -224,7 +225,12 @@ const bestSellers = [
             </div>
             <h3 class="text-xl sm:text-2xl font-bold mb-3">{kit.name}</h3>
             <p class="text-gray-600 mb-6 text-sm sm:text-base">{kit.description}</p>
-            <a href={`/kits/${kit.id}`} class="inline-block bg-pink-600 text-white px-6 py-3 rounded-lg hover:bg-pink-800 transition-colors text-sm sm:text-base font-medium">
+            
+            {/* Enlace que lleva a la página de kits y activa la categoría correspondiente */}
+            <a 
+              href={`/kits#${kit.id}`}
+              class="inline-block bg-pink-600 text-white px-6 py-3 rounded-lg hover:bg-pink-800 transition-colors text-sm sm:text-base font-medium"
+            >
               Ver kit completo
             </a>
           </div>
