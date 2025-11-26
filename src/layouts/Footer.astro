@@ -19,28 +19,13 @@ const { title = "footer" } = Astro.props;
                     <h4 class="text-sm font-semibold text-zinc-900">Tienda</h4>
                     <ul class="space-y-2 text-sm text-zinc-600">
                         <li>
-                            <a href="/products" class="hover:text-pink-600 transition-colors">
+                            <a href="/products/all" class="hover:text-pink-600 transition-colors">
                                 Todos los productos
                             </a>
                         </li>
                         <li>
-                            <a href="/collections/new" class="hover:text-pink-600 transition-colors">
-                                Novedades
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/collections/bestsellers" class="hover:text-pink-600 transition-colors">
-                                Más vendidos
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/collections/sale" class="hover:text-pink-600 transition-colors">
-                                Ofertas
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/gift-cards" class="hover:text-pink-600 transition-colors">
-                                Tarjetas de regalo
+                            <a href="/kits" class="hover:text-pink-600 transition-colors">
+                               Kits
                             </a>
                         </li>
                     </ul>
@@ -51,29 +36,39 @@ const { title = "footer" } = Astro.props;
                     <h4 class="text-sm font-semibold text-zinc-900">Categorías</h4>
                     <ul class="space-y-2 text-sm text-zinc-600">
                         <li>
-                        <a href="/category/face" class="hover:text-pink-600 transition-colors">
-                            Rostro
-                        </a>
+                            <a href="/products/acne" class="hover:text-pink-600 transition-colors">
+                                Acne
+                            </a>
                         </li>
                         <li>
-                        <a href="/category/eyes" class="hover:text-pink-600 transition-colors">
-                            Ojos
-                        </a>
+                            <a href="/products/antiedad" class="hover:text-pink-600 transition-colors">
+                                Antiedad
+                            </a>
                         </li>
                         <li>
-                        <a href="/category/lips" class="hover:text-pink-600 transition-colors">
-                            Labios
-                        </a>
+                            <a href="/products/hiperpigmentacion" class="hover:text-pink-600 transition-colors">
+                                Hiperpigmentacion
+                            </a>
                         </li>
                         <li>
-                        <a href="/category/skincare" class="hover:text-pink-600 transition-colors">
-                            Cuidado de la piel
-                        </a>
+                            <a href="/products/proteccion-solar" class="hover:text-pink-600 transition-colors">
+                                Proteccion Solar
+                            </a>
                         </li>
                         <li>
-                        <a href="/category/tools" class="hover:text-pink-600 transition-colors">
-                            Brochas y accesorios
-                        </a>
+                            <a href="/products/hidratantes" class="hover:text-pink-600 transition-colors">
+                                Hidratantes
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/products/limpiadores" class="hover:text-pink-600 transition-colors">
+                                Limpiadores
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/products/otros" class="hover:text-pink-600 transition-colors">
+                                Otros
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -83,29 +78,19 @@ const { title = "footer" } = Astro.props;
                     <h4 class="text-sm font-semibold text-zinc-900">Ayuda</h4>
                     <ul class="space-y-2 text-sm text-zinc-600">
                         <li>
-                        <a href="/faq" class="hover:text-pink-600 transition-colors">
-                            Preguntas frecuentes
-                        </a>
+                            <a href="/faq" class="hover:text-pink-600 transition-colors">
+                                Preguntas frecuentes
+                            </a>
                         </li>
                         <li>
-                        <a href="/shipping" class="hover:text-pink-600 transition-colors">
-                            Envíos
-                        </a>
+                            <a href="/#contacto" class="hover:text-pink-600 transition-colors">
+                                Contactanos
+                            </a>
                         </li>
                         <li>
-                        <a href="/returns" class="hover:text-pink-600 transition-colors">
-                            Cambios y devoluciones
-                        </a>
-                        </li>
-                        <li>
-                        <a href="/size-guide" class="hover:text-pink-600 transition-colors">
-                            Guía de tonos
-                        </a>
-                        </li>
-                        <li>
-                        <a href="/contact" class="hover:text-pink-600 transition-colors">
-                            Contacto
-                        </a>
+                            <a href="/returns" class="hover:text-pink-600 transition-colors">
+                                Terminos y condiciones
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -115,29 +100,19 @@ const { title = "footer" } = Astro.props;
                     <h4 class="text-sm font-semibold text-zinc-900">Acerca de</h4>
                     <ul class="space-y-2 text-sm text-zinc-600">
                         <li>
-                        <a href="/about" class="hover:text-pink-600 transition-colors">
-                            Nuestra historia
-                        </a>
+                            <a href="/sobre_nosotros" class="hover:text-pink-600 transition-colors">
+                                Sobre nosotros
+                            </a>
                         </li>
                         <li>
-                        <a href="/sustainability" class="hover:text-pink-600 transition-colors">
-                            Sustentabilidad
-                        </a>
+                            <a href="/blog" class="hover:text-pink-600 transition-colors">
+                                Blog
+                            </a>
                         </li>
                         <li>
-                        <a href="/blog" class="hover:text-pink-600 transition-colors">
-                            Blog
-                        </a>
-                        </li>
-                        <li>
-                        <a href="/careers" class="hover:text-pink-600 transition-colors">
-                            Trabajá con nosotros
-                        </a>
-                        </li>
-                        <li>
-                        <a href="/press" class="hover:text-pink-600 transition-colors">
-                            Prensa
-                        </a>
+                            <a href="/antes_despues" class="hover:text-pink-600 transition-colors">
+                                Antes y despues
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -146,19 +121,19 @@ const { title = "footer" } = Astro.props;
                 <div class="space-y-4 col-span-2 md:col-span-4 lg:col-span-1">
                     <h4 class="text-sm font-semibold text-zinc-900">Seguinos</h4>
                     <div class="flex gap-3">
-                        <a
-                        href="https://instagram.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="w-9 h-9 rounded-full bg-pink-100 flex items-center justify-center text-pink-600 hover:bg-pink-600 hover:text-white transition-colors"
-                        aria-label="Instagram"
-                        >
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6">
-                                <rect x="4" y="4" width="16" height="16" rx="5" ry="5" />
-                                <circle cx="12" cy="12" r="3.2" />
-                                <circle cx="17" cy="7" r="0.8" fill="currentColor" />
-                            </svg>
-                        </a>
+<a
+    href="https://www.instagram.com/alvitcs?igsh=eHRjcnM1bnZwYW5o"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="w-9 h-9 rounded-full bg-pink-100 flex items-center justify-center text-pink-600 hover:bg-pink-600 hover:text-white transition-colors"
+    aria-label="Instagram"
+>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6">
+        <rect x="4" y="4" width="16" height="16" rx="5" ry="5" />
+        <circle cx="12" cy="12" r="3.2" />
+        <circle cx="17" cy="7" r="0.8" fill="currentColor" />
+    </svg>
+</a>
                     </div>
 
                     <div class="mt-6 space-y-2">
@@ -170,4 +145,5 @@ const { title = "footer" } = Astro.props;
                 </div>
             </div>
         </div>
+    </div>
 </footer>
