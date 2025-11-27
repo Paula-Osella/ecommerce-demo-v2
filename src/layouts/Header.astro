@@ -249,31 +249,13 @@ const isActive = (path: string) => {
               </a>
 
               <a 
-                href="/#contacto" 
+                href="/contacto" 
                 class:list={[
                   "pb-1 border-b-2 transition-all whitespace-nowrap",
-                  currentPath === '/#contacto' ? "border-pink-700" : "border-transparent hover:border-zinc-900"
+                  isActive('/contacto') ? "border-pink-700" : "border-transparent hover:border-zinc-900"
                 ]}
               >
                 Contáctanos
-              </a>
-                 <a 
-                href="/#contacto" 
-                class:list={[
-                  "pb-1 border-b-2 transition-all whitespace-nowrap",
-                  currentPath === '/#contacto' ? "border-pink-700" : "border-transparent hover:border-zinc-900"
-                ]}
-              >
-                Terminos y condiciones
-              </a>
-                   <a 
-                href="/#contacto" 
-                class:list={[
-                  "pb-1 border-b-2 transition-all whitespace-nowrap",
-                  currentPath === '/#contacto' ? "border-pink-700" : "border-transparent hover:border-zinc-900"
-                ]}
-              >
-                Preguntas frecuentes
               </a>
             </div>
           </nav>
@@ -380,7 +362,7 @@ const isActive = (path: string) => {
           </a>
 
           <a 
-            href="/#contacto"
+            href="/contacto"
             class="block px-4 py-3 rounded-lg font-medium text-base transition-colors hover:bg-zinc-50 hover:text-pink-700 border-t border-zinc-200 mt-4 pt-4"
           >
             Contáctanos
