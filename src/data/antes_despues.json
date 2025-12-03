@@ -32,7 +32,7 @@
     {
         "id": 3,
         "categoria": "hiperpigmentacion",
-        "nombre": "Laura, 35 años",
+        "nombre": "Laura, 67 años",
         "duracion": "23 dias",
         "antes": "/antes_despues/antesydespues20.1.jpg",
         "despues": "/antes_despues/antesydespues20.jpg",
@@ -77,7 +77,7 @@
     {
         "id": 6,
         "categoria": "anti-envejecimiento",
-        "nombre": "Patricia, 52 años",
+        "nombre": "Patricia, 60 años",
         "duracion": "1 mes",
         "antes": "/antes_despues/antesydespues1.jpg",
         "despues": "/antes_despues/antesydespues1.2.jpg",
