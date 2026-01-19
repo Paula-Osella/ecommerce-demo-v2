@@ -1,0 +1,52 @@
+---
+import "../styles/global.css";
+import productosData from "../data/products.json";
+
+const currentPath = Astro.url.pathname;
+
+const isActive = (path) => {
+  if (path === '/') return currentPath === '/';
+  return currentPath.startsWith(path);
+};
+---
+
+<div class="sticky top-0 z-50">
+
+  <div class="w-full bg-zinc-900 text-zinc-100 text-[10px] sm:text-[11px] md:text-xs">
+    <div class="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 flex items-center justify-between">
+      <a href="#contacto" class="uppercase tracking-[0.18em] font-medium hover:text-pink-200">
+        Contáctanos
+      </a>
+      <div class="flex gap-2">
+        <a href="https://wa.me/5491112345678" target="_blank" class="w-6 h-6 border rounded-full flex items-center justify-center">W</a>
+        <a href="https://www.instagram.com/dermalosophyalviteclat/" target="_blank" class="w-6 h-6 border rounded-full flex items-center justify-center">I</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="border-b border-zinc-200 bg-white/95 backdrop-blur-sm shadow-sm">
+    <div class="max-w-7xl mx-auto px-4">
+
+      <div class="py-4 flex items-center gap-4">
+        <a href="/">
+          <img src="/Logo/Logo2.png" class="h-14 object-contain" />
+        </a>
+        <div class="flex-1"></div>
+        <button id="menu-toggle" class="lg:hidden">☰</button>
+      </div>
+
+      <nav class="hidden lg:flex justify-center gap-8 py-3 text-xs uppercase tracking-widest">
+        <a href="/" class={isActive('/') && "border-b-2 border-pink-700"}>Inicio</a>
+        <a href="/sobre_nosotros" class={isActive('/sobre_nosotros') && "border-b-2 border-pink-700"}>Sobre nosotros</a>
+        <a href="/products" class={isActive('/products') && "border-b-2 border-pink-700"}>Productos</a>
+        <a href="/kits" class={isActive('/kits') && "border-b-2 border-pink-700"}>Kits</a>
+        <a href="/contacto" class={isActive('/contacto') && "border-b-2 border-pink-700"}>Contacto</a>
+      </nav>
+
+    </div>
+  </header>
+</div>
+
+<script define:vars={{ productos: productosData }}>
+  console.log("Header cargado", productos.length);
+</script>
